@@ -1,0 +1,20 @@
+.login.bg{
+    position: relative;
+}
+.login .black-card-wrapper{
+    width: 738px;
+    height: 386px;
+    border: 1px solid #000;
+    background-color: #0B0C07;
+    position: absolute;
+    right: 13%;
+    top: 10%;
+  }
+.login .black-card-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}

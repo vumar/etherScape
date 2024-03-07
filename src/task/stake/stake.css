@@ -1,0 +1,63 @@
+.stake-page {
+  padding-top: 5%;
+}
+.stake-page > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 386px;
+}
+
+.stake-page .black-card-wrapper {
+  border: 1px solid #000;
+  background-color: #0b0c07;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: center;
+}
+.stake-page .black-card-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+}
+.stake-page .black-card-wrapper > div p {
+  color: #f4ffb0;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+}
+.stake-page > div .sidebar-wrapper {
+  margin-right: 80px;
+}
+
+
+.stake-page .black-card-wrapper .detail {
+    flex-direction: column;
+    justify-content: space-between;
+    color: yellow;
+}
+.stake-page .black-card-wrapper .detail > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #2C280C;
+}
+.stake-page .black-card-wrapper .detail > div ul {
+    display: flex;
+}
+.stake-page .black-card-wrapper .detail > div ul li {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+.stake-page .black-card-wrapper .detail > div ul li.active {
+    background-color: #2C280C;
+    border-radius: 4px;
+}
+.stake-page .black-card-wrapper .detail > div span{
+    font-family: "Inter", sans-serif;
+}

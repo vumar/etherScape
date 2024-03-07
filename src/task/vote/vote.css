@@ -1,0 +1,101 @@
+.vote-page {
+  padding-top: 5%;
+}
+.vote-page > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+.vote-page .black-card-wrapper {
+  border: 1px solid #000;
+  background-color: #0b0c07;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.vote-page .black-card-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+}
+.vote-page .black-card-wrapper > div p {
+  color: #f4ffb0;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+}
+.vote-page > div .sidebar-wrapper {
+  margin-right: 80px;
+}
+
+.vote-page .table-wrapper {
+  background-color: #000;
+  height: 100%;
+  margin-left: 30px;
+  padding: 17px 20px;
+  width: 410px;
+  overflow: auto;
+}
+.vote-page .table-wrapper table {
+  width: 100%;
+}
+.vote-page .table-wrapper table thead {
+  border-bottom: 1px solid rgba(244, 255, 176, 0.2);
+}
+.vote-page .table-wrapper table thead th {
+  color: #f4ffb0;
+  font-size: 16px;
+  padding-bottom: 11px;
+  font-family: "Inter", sans-serif;
+}
+.vote-page .table-wrapper table tbody td {
+  padding: 10px;
+  color: #f4ffb0;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.vote-page .table-wrapper table tbody tr:first-child td {
+  padding-top: 27px;
+}
+.vote-page .table-wrapper table tbody tr:last-child td {
+  padding-bottom: 33px;
+}
+
+.vote-page .black-card-wrapper span {
+    color: #F4FFB0;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+}
+
+.vote-page .black-card-wrapper select {
+    background-color: transparent;
+    color: #F4FFB0;
+    padding: 5px 4px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.vote-page .black-card-wrapper select option {
+    background-color: #fff; 
+    color: #333;
+}
+.vote-page .black-card-wrapper .record {
+    font-size: 18px;
+    color: #F4FFB0;
+    line-height: 25px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+}
