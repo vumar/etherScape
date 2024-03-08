@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ReactComponent as Logo } from "../Images/svg/logo.svg";
 import { Link, useLocation } from "react-router-dom";
-import Medium from "../Images/png/Medium.png";
-import Discord from "../Images/png/Discord.png";
-import Telegram from "../Images/png/Telegram.png";
-import Twitter from "../Images/png/Twitter (1).png";
-
+import { ReactComponent as Medium } from "../Images/svg/Medium.svg";
+import { ReactComponent as Discord } from "../Images/svg/Discord.svg";
+import { ReactComponent as Telegram } from "../Images/svg/Telegram.svg";
+import { ReactComponent as Twitter } from "../Images/svg/Twitter.svg";
 const Sidebar = () => {
   const ref = useRef();
   const location = useLocation();
-  const [activeItem, setActiveItem] = useState("DEPOSIT");
+  const [activeItem, setActiveItem] = useState("Deposit");
   const [isMobile, setIsMobile] = useState(false);
   const [open, setOpen] = useState();
   const [menu, setMenu] = useState(false);
@@ -35,7 +34,7 @@ const Sidebar = () => {
     // Determine the active item based on the pathname
     switch (pathname) {
       case "/deposit":
-        setActiveItem("DEPOSIT");
+        setActiveItem("Deposit");
 
         break;
       case "/withdraw":
@@ -48,11 +47,11 @@ const Sidebar = () => {
         setActiveItem("Vote");
         break;
       default:
-        setActiveItem("DEPOSIT");
+        setActiveItem("Deposit");
     }
 
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1199);
     };
 
     handleResize();
@@ -64,18 +63,22 @@ const Sidebar = () => {
   return (
     <div className="sidebar-wrapper">
       <Logo />
-      <div>
+      <div className="social-media">
         <span>
-          <img src={Twitter} />
+          <Link to="https://twitter.com/Ether_Scape" target="_blank" rel="noopener noreferrer"><Twitter /></Link>
+          
         </span>
         <span>
-          <img src={Telegram} />
+          <Link to="https://t.me/Etherscape" target="_blank" rel="noopener noreferrer"><Telegram /></Link>
+          
         </span>
         <span>
-          <img src={Discord} />
+          <Link to="https://discord.gg/ether-scape" target="_blank" rel="noopener noreferrer"><Discord /></Link>
+          
         </span>
         <span>
-          <img src={Medium} />
+          <Link to="https://medium.com/@Ether_Scape" target="_blank" rel="noopener noreferrer"><Medium /></Link>
+          
         </span>
       </div>
       {isMobile ? (
@@ -97,8 +100,8 @@ const Sidebar = () => {
               className="dropdown-content"
               style={{ display: menu ? "block" : "none" }}
             >
-              <div className={activeItem === "DEPOSIT" ? "active" : ""}>
-                <Link to="/deposit">DEPOSIT</Link>
+              <div className={activeItem === "Deposit" ? "active" : ""}>
+                <Link to="/deposit">Deposit</Link>
               </div>
               <div className={activeItem === "Withdraw" ? "active" : ""}>
                 <Link to="/withdraw">Withdraw</Link>
@@ -115,8 +118,8 @@ const Sidebar = () => {
       ) : (
         <ul>
           {/* Content for desktop resolution */}
-          <li className={activeItem === "DEPOSIT" ? "active" : ""}>
-            <Link to="/deposit">DEPOSIT</Link>
+          <li className={activeItem === "Deposit" ? "active" : ""}>
+            <Link to="/deposit">Deposit</Link>
           </li>
           <li className={activeItem === "Withdraw" ? "active" : ""}>
             <Link to="/withdraw">Withdraw</Link>

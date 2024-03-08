@@ -46,7 +46,7 @@ const Connect = () => {
               </Button>
             </div>
           ) : (
-            <div>
+            <div className="submit-page">
               <CustomSelect />
               <CustomInput
                 // value="Enter Value"

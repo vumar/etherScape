@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  /* height: 450px; */
 }
 .vote-page .black-card-wrapper {
   border: 1px solid;
@@ -19,8 +19,9 @@
       rgba(237, 230, 216, 1)
     )
     1;
+  box-shadow: 0px 0px 10px 0px rgba(73, 82, 14, 1) inset;
   background-color: #0b0c07;
-  padding: 20px 80px;
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -74,7 +75,9 @@
 .vote-page .table-wrapper table tbody tr:last-child td {
   padding-bottom: 33px;
 }
-
+.vote-page .black-card-wrapper span:first-child{
+  color: rgb(244 255 176 / 50%);
+}
 .vote-page .black-card-wrapper span {
   color: #f4ffb0;
   font-size: 18px;
@@ -99,28 +102,21 @@
   line-height: 25px;
   font-family: "Inter", sans-serif;
   text-align: center;
+  z-index: 100;
 }
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 12;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1199px) {
   .vote-page > div .sidebar-wrapper {
     margin-right: 0;
-    border-bottom: 1px solid;
-    border-image: linear-gradient(
-        to right,
-        rgba(237, 230, 216, 1),
-        rgba(46, 54, 85, 1),
-        rgba(237, 230, 216, 1)
-      )
-      1;
   }
   .vote-page > div {
     height: auto;
@@ -131,7 +127,15 @@
     width: 100%;
     padding: 40px 30px;
   }
-  .vote-page .black-card-wrapper .overlay {
-    height: 80%;
+  .vote-page .black-card-wrapper button{
+    width: 100%;
   }
+  .vote-page .black-card-wrapper > div,
+  .vote-page .black-card-wrapper > div .dropdown{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
 }

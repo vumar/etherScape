@@ -37,7 +37,7 @@ const Stake = () => {
               <span>4%</span>
             </div>
             <div>
-              <span>TVL</span>
+              <span className="tvl">TVL</span>
               <span>$ 564, 895</span>
             </div>
           </div>

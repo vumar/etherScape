@@ -19,7 +19,7 @@ const Deposit = () => {
           <CustomInput
             // value="Enter Value"
             // onChange={handleChange}
-            placeholder="Enter username to verify"
+            placeholder="Enter amount to deposit"
           />
           <Button className="yellow-btn">Deposit</Button>
         </div>

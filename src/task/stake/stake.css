@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 386px;
+  /* height: 386px; */
 }
 
 .stake-page .black-card-wrapper {
@@ -20,8 +20,9 @@
       rgba(237, 230, 216, 1)
     )
     1;
+  box-shadow: 0px 0px 10px 0px rgba(73, 82, 14, 1) inset;
   background-color: #0b0c07;
-  padding: 20px 80px;
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -31,6 +32,9 @@
 .stake-page .black-card-wrapper > div {
   display: flex;
   justify-content: space-between;
+}
+.stake-page .black-card-wrapper > div .dropdown{
+  width: 100%;
 }
 .stake-page .black-card-wrapper > div p {
   color: #f4ffb0;
@@ -44,7 +48,8 @@
 .stake-page .black-card-wrapper .detail {
   flex-direction: column;
   justify-content: space-between;
-  color: yellow;
+  color: #F4FFB0;
+  gap: 10px;
 }
 .stake-page .black-card-wrapper .detail > div {
   display: flex;
@@ -56,6 +61,7 @@
 }
 .stake-page .black-card-wrapper .detail > div ul {
   display: flex;
+  align-items: center;
 }
 .stake-page .black-card-wrapper .detail > div ul li {
   font-size: 16px;
@@ -66,22 +72,21 @@
 .stake-page .black-card-wrapper .detail > div ul li.active {
   background-color: #2c280c;
   border-radius: 4px;
+  padding: 7px 12px;
 }
 .stake-page .black-card-wrapper .detail > div span {
   font-family: "Inter", sans-serif;
 }
+.stake-page .black-card-wrapper .detail > div span:first-child{
+  color: rgb(244 255 176 / 50%);
+}
+.stake-page .black-card-wrapper .detail > div span.tvl {
+  color: rgb(244 255 176 / 1);
+}
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1199px) {
   .stake-page > div .sidebar-wrapper {
     margin-right: 0;
-    border-bottom: 1px solid;
-    border-image: linear-gradient(
-        to right,
-        rgba(237, 230, 216, 1),
-        rgba(46, 54, 85, 1),
-        rgba(237, 230, 216, 1)
-      )
-      1;
   }
   .stake-page > div {
     height: auto;
@@ -93,4 +98,8 @@
     height: auto;
     padding: 40px;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
 }
