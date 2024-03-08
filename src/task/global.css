@@ -219,6 +219,7 @@ a:hover {
 }
 .sidebar-wrapper svg {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .sidebar-wrapper > div {
