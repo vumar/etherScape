@@ -1,16 +1,26 @@
 .deposit-page {
   padding-top: 5%;
+  height: 100vh;
+  overflow: auto;
 }
 .deposit-page > div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 386px;
 }
 .deposit-page .black-card-wrapper {
-  border: 1px solid #000;
+  border: 1px solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(237, 230, 216, 1),
+      rgba(8, 8, 8, 1),
+      rgba(237, 230, 216, 1)
+    )
+    1;
   background-color: #0b0c07;
-  padding: 104px 80px;
+  padding: 20px 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -21,19 +31,13 @@
   display: flex;
   justify-content: space-between;
 }
-.deposit-page .black-card-wrapper > div p{
-    color: #f4ffb0;
-    font-size: 17px;
-    font-family: "Inter", sans-serif;
+.deposit-page .black-card-wrapper > div p {
+  color: #f4ffb0;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
 }
 .deposit-page > div .sidebar-wrapper {
   margin-right: 80px;
-}
-
-.deposit-page .black-card-wrapper {
-  border: 1px solid #000;
-  background-color: #0b0c07;
-  padding: 104px 80px;
 }
 
 .deposit-page .table-wrapper {
@@ -45,26 +49,54 @@
   overflow: auto;
 }
 .deposit-page .table-wrapper table {
-    width: 100%;
+  width: 100%;
 }
 .deposit-page .table-wrapper table thead {
-    border-bottom: 1px solid rgba(244, 255, 176, 0.2);
+  border-bottom: 1px solid rgba(244, 255, 176, 0.2);
 }
 .deposit-page .table-wrapper table thead th {
-    color: #F4FFB0;
-    font-size: 16px;
-    padding-bottom: 11px;
-    font-family: "Inter", sans-serif;
+  color: #f4ffb0;
+  font-size: 16px;
+  padding-bottom: 11px;
+  font-family: "Inter", sans-serif;
 }
 .deposit-page .table-wrapper table tbody td {
-    padding: 10px;
-    color: #F4FFB0;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
+  padding: 10px;
+  color: #f4ffb0;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 .deposit-page .table-wrapper table tbody tr:first-child td {
-    padding-top: 27px;
+  padding-top: 27px;
 }
-.deposit-page .table-wrapper table tbody tr:last-child td{
-    padding-bottom: 33px;
+.deposit-page .table-wrapper table tbody tr:last-child td {
+  padding-bottom: 33px;
+}
+
+@media only screen and (max-width: 599px) {
+  .deposit-page > div {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+  .deposit-page > div .sidebar-wrapper {
+    margin-right: 0;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        to right,
+        rgba(237, 230, 216, 1),
+        rgba(46, 54, 85, 1),
+        rgba(237, 230, 216, 1)
+      )
+      1;
+  }
+  .deposit-page .black-card-wrapper {
+    padding: 40px;
+    width: 100%;
+  }
+  .deposit-page .table-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
 }

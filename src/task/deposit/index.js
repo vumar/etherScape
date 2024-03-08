@@ -3,6 +3,7 @@ import Sidebar from "../components/sidebar";
 import CustomInput from "../components/input";
 import Button from "../components/button";
 import "./deposit.css";
+import CustomSelect from "../components/select";
 
 const Deposit = () => {
   return (
@@ -10,6 +11,7 @@ const Deposit = () => {
       <div>
         <Sidebar />
         <div className="black-card-wrapper">
+          <CustomSelect />
           <div>
             <p>Locked Tokens</p>
             <p>564, 895</p>

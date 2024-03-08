@@ -3,6 +3,7 @@ import Sidebar from "../components/sidebar";
 import CustomInput from "../components/input";
 import Button from "../components/button";
 import "./stake.css";
+import CustomSelect from "../components/select";
 
 const Stake = () => {
   return (
@@ -10,6 +11,7 @@ const Stake = () => {
       <div>
         <Sidebar />
         <div className="black-card-wrapper">
+        <CustomSelect />
           <CustomInput
             // value="Stake"
             // onChange={handleChange}

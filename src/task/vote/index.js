@@ -4,6 +4,7 @@ import Sidebar from "../components/sidebar";
 import Button from "../components/button";
 import "./vote.css";
 import VoteImg from "../Images/png/vote-img.png";
+import CustomSelect from "../components/select";
 
 const VotePage = () => {
   const [vote, setVote] = useState(false);
@@ -19,12 +20,7 @@ const VotePage = () => {
             <div className={save ? "overlay" : ""}></div>
               <span>Count the EtherScape Items</span>
               <img src={VoteImg} alt="vote-img" />
-              <select name="cars" id="cars">
-                <option value="1">Item 1</option>
-                <option value="2">Item 2</option>
-                <option value="3">Item 3</option>
-                <option value="4">Item 4</option>
-              </select>
+              <CustomSelect />
               <Button className="yellow-btn" onClick={() => setSave(true)}>
                 Vote Now
               </Button>

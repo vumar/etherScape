@@ -1,16 +1,26 @@
 .withdraw-page {
   padding-top: 5%;
+  height: 100vh;
+  overflow: auto;
 }
 .withdraw-page > div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 386px;
 }
 .withdraw-page .black-card-wrapper {
-  border: 1px solid #000;
+  border: 1px solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(237, 230, 216, 1),
+      rgba(8, 8, 8, 1),
+      rgba(237, 230, 216, 1)
+    )
+    1;
   background-color: #0b0c07;
-  padding: 104px 80px;
+  padding: 20px 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -28,12 +38,6 @@
 }
 .withdraw-page > div .sidebar-wrapper {
   margin-right: 80px;
-}
-
-.withdraw-page .black-card-wrapper {
-  border: 1px solid #000;
-  background-color: #0b0c07;
-  padding: 104px 80px;
 }
 
 .withdraw-page .table-wrapper {
@@ -67,4 +71,33 @@
 }
 .withdraw-page .table-wrapper table tbody tr:last-child td {
   padding-bottom: 33px;
+}
+
+@media only screen and (max-width: 599px) {
+  .withdraw-page > div .sidebar-wrapper {
+    margin-right: 0;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        to right,
+        rgba(237, 230, 216, 1),
+        rgba(46, 54, 85, 1),
+        rgba(237, 230, 216, 1)
+      )
+      1;
+  }
+  .withdraw-page > div {
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+  .withdraw-page .black-card-wrapper {
+    padding: 40px;
+  }
+  .withdraw-page .table-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+  .withdraw-page .black-card-wrapper {
+    width: 100%;
+  }
 }

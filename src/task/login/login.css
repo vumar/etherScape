@@ -1,20 +1,78 @@
-.login.bg{
-    position: relative;
+.login.bg {
+  position: relative;
+  padding-top: 5%;
+  height: 100vh;
+  overflow: auto;
 }
-.login .black-card-wrapper{
-    width: 738px;
-    height: 386px;
-    border: 1px solid #000;
-    background-color: #0B0C07;
-    position: absolute;
-    right: 13%;
-    top: 10%;
-  }
+.login .black-card-wrapper {
+  height: 100%;
+  border: 1px solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(237, 230, 216, 1),
+      rgba(8, 8, 8, 1),
+      rgba(237, 230, 216, 1)
+    )
+    1;
+  background-color: #0b0c07;
+}
 .login .black-card-wrapper > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+.login.bg > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 386px;
+}
+.login.bg > div .sidebar-wrapper {
+  margin-right: 80px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(237, 230, 216, 1),
+      rgba(46, 54, 85, 1),
+      rgba(237, 230, 216, 1)
+    )
+    1;
+}
+.login .black-card-wrapper p {
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 700;
+  width: 70%;
+  margin: 0 auto;
+  color: rgba(244, 255, 176, 1);
+}
+.login .black-card-wrapper {
+  min-width: 430px;
+  text-align: center;
+}
+.login.bg > div .sidebar-wrapper ul {
+  display: none;
+}
+
+@media only screen and (max-width: 599px) {
+  .login.bg > div {
+    padding: 20px;
+  }
+  .login .black-card-wrapper {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
+  .login .black-card-wrapper p {
+    width: 90%;
+  }
+  .login.bg > div .sidebar-wrapper{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
