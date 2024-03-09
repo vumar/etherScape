@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../components/button";
 import CustomInput from "../components/input";
 import "./login.css";
 import { Link } from "react-router-dom";
-import CustomSelect from "../components/select";
 import Sidebar from "../components/sidebar";
+import DownArrow from "../Images/png/down_arrow.png";
+import BlackCircle from "../Images/png/black-circle.png";
+import Dropdown from "../components/dropdown";
 
 const Connect = () => {
+  const [connectbtn, setConnectBtn] = useState(false);
   const [confirm, setConfirm] = useState(true);
 
-  const handleChange = (e) => {
-    console.log("handle Change");
-  };
 
-  const handleClick = () => {
-    console.log("Button clicked!");
-  };
   return (
     <div className="login bg">
       <div>
@@ -24,7 +21,7 @@ const Connect = () => {
           {confirm ? (
             <div>
               <p>
-                Welcome to EtherScape Dapp! <br /> Please Connect Your Wallet{" "}
+                Welcome to EtherScape Dapp! <br /> Please Connect Your Wallet
                 <br />
                 to Proceed
               </p>
@@ -34,26 +31,30 @@ const Connect = () => {
                   setConfirm(false);
                 }}
               >
-                {/* <Link
-                  to="/deposit"
-                  onClick={() => {
-                    setConfirm(true);
-                  }}
-                >
-                  Connect
-                </Link> */}
                 Connect
               </Button>
             </div>
           ) : (
             <div className="submit-page">
-              <CustomSelect />
+              {connectbtn ? (
+                <Button
+                  className="yellow-btn"
+                  onClick={(e) => {
+                    setConnectBtn(false);
+                  }}
+                >
+                  Connect
+                </Button>
+              ) : (
+                <Dropdown/>
+              )}
+
               <CustomInput
                 // value="Enter Value"
                 // onChange={handleChange}
                 placeholder="Enter username to verify"
               />
-              <Button className="yellow-btn" onClick={handleClick}>
+              <Button className="yellow-btn">
                 <Link
                   to="/deposit"
                   onClick={() => {

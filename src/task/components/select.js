@@ -4,7 +4,7 @@ import DownArrow from '../Images/png/down_arrow.png'
 const CustomSelect = () => {
   const ref = useRef();
   const [isActive, setIsActive] = useState(false);
-  const [selected, setIsSelected] = useState("Choose one");
+  const [selected, setIsSelected] = useState("Item 1");
   const [open, setOpen] = useState();
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const CustomSelect = () => {
             }}
             className="item"
           >
-            Copy address
+            Item 1
           </div>
           <div
             className="item"
@@ -58,7 +58,7 @@ const CustomSelect = () => {
               setIsActive(!isActive);
             }}
           >
-            Disconnect
+            Item 2
           </div>
         </div>
       </div>

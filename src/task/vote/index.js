@@ -5,6 +5,7 @@ import Button from "../components/button";
 import "./vote.css";
 import VoteImg from "../Images/png/vote-img.png";
 import CustomSelect from "../components/select";
+import Dropdown from "../components/dropdown";
 
 const VotePage = () => {
   const [vote, setVote] = useState(false);
@@ -33,6 +34,7 @@ const VotePage = () => {
             </>
           ) : (
             <>
+            <Dropdown />
               <span>Cast your vote</span>
               <Button className="yellow-btn" onClick={() => setVote(true)}>
                 Rune 123

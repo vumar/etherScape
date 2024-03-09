@@ -309,6 +309,28 @@ a:hover {
     1;
 }
 
+.dropdown-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.dropdown-btn div span{
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(244 255 176 / 100%) !important;
+}
+.dropdown-btn > div{
+  width: 90%;
+}
+.dropdown-btn > div .code span{
+  white-space: nowrap;
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media only screen and (max-width: 1199px) {
   .bg {
     background-image: url("./Images/svg/bg-mobile.svg");

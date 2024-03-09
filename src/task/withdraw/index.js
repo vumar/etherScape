@@ -3,7 +3,7 @@ import Sidebar from "../components/sidebar";
 import CustomInput from "../components/input";
 import Button from "../components/button";
 import "./withdraw.css";
-import CustomSelect from "../components/select";
+import Dropdown from "../components/dropdown";
 
 const Withdraw = () => {
   return (
@@ -11,7 +11,7 @@ const Withdraw = () => {
       <div>
         <Sidebar />
         <div className="black-card-wrapper">
-          <CustomSelect />
+          <Dropdown />
           <CustomInput
             // value="Custom"
             // onChange={handleChange}

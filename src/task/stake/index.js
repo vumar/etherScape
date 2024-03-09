@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/sidebar";
 import CustomInput from "../components/input";
 import Button from "../components/button";
 import "./stake.css";
-import CustomSelect from "../components/select";
+import Dropdown from "../components/dropdown";
 
 const Stake = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleActive = (index) => {
+    setActiveIndex(index);
+  };
   return (
     <div className="stake-page bg">
       <div>
         <Sidebar />
         <div className="black-card-wrapper">
-        <CustomSelect />
+          <Dropdown />
           <CustomInput
             // value="Stake"
             // onChange={handleChange}
@@ -21,11 +26,15 @@ const Stake = () => {
             <div>
               <span>Days</span>
               <ul>
-                <li className="active">7</li>
-                <li className="">14</li>
-                <li>21</li>
-                <li>30</li>
-                <li>60</li>
+                {[7, 14, 21, 30, 60].map((number, index) => (
+                  <li
+                    key={index}
+                    className={index === activeIndex ? "active" : ""}
+                    onClick={() => handleActive(index)}
+                  >
+                    {number}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
